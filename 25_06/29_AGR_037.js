@@ -199,11 +199,11 @@ function validate_CAP1_R5000_C1(values) {
 
     var calculatedSum = CAP1_R5100 + CAP2_R7100 + CAP2_R7200 + CAP2_R7300 + CAP2_R7400 + CAP2_R7500;
 
-    if (CAP1_R5000 !== calculatedSum) {
+    if (CAP1_R5000 < calculatedSum) {
         webform.errors.push({
             'fieldName': 'CAP1_R5000_' + col1,
             'weight': 19,
-            'msg': Drupal.t('Cod eroare: 45-014. Valoarea CAP.1 Rând.5000 col.1 trebuie să fie egală cu suma valorilor: CAP1 Rând.5100 col.1, CAP2 Rând.7100 col.1, CAP2 Rând.7200 col.1, CAP2 Rând.7300 col.1, CAP2 Rând.7400 col.1 și CAP2 Rând.7500 col.1. Valoarea găsită: ' + CAP1_R5000 + ', suma calculată: ' + calculatedSum)
+            'msg': Drupal.t('Cod eroare: 45-014. Valoarea CAP.1 Rând.5000 col.1 trebuie să fie mai mare sau egala  cu suma valorilor: CAP1 Rând.5100 col.1, CAP2 Rând.7100 col.1, CAP2 Rând.7200 col.1, CAP2 Rând.7300 col.1, CAP2 Rând.7400 col.1 și CAP2 Rând.7500 col.1. Valoarea găsită: ' + CAP1_R5000 + ', suma calculată: ' + calculatedSum)
         });
     }
 }
@@ -240,12 +240,12 @@ function validate_CAP1_R5000_C1_F(values) {
 
         var calculatedSum_F = CAP1_R5100_F + CAP2_R7100_F + CAP2_R7200_F + CAP2_R7300_F + CAP2_R7400_F + CAP2_R7500_F;
 
-        if (CAP1_R5000_F !== calculatedSum_F) {
+        if (CAP1_R5000_F < calculatedSum_F) {
             webform.errors.push({
                 'fieldName': 'CAP1_R5000_' + col1 + '_FILIAL',
                 'index': j,
                 'weight': 19,
-                'msg': Drupal.t('Raion: @CAP_CUATM_FILIAL - Cod eroare: 45-014-F. Valoarea CAP.1 Rând.5000 col.1 trebuie să fie egală cu suma valorilor: CAP1 Rând.5100 col.1, CAP2 Rând.7100 col.1, CAP2 Rând.7200 col.1, CAP2 Rând.7300 col.1, CAP2 Rând.7400 col.1 și CAP2 Rând.7500 col.1. Valoarea găsită: ' + CAP1_R5000_F + ', suma calculată: ' + calculatedSum_F, {
+                'msg': Drupal.t('Raion: @CAP_CUATM_FILIAL - Cod eroare: 45-014-F. Valoarea CAP.1 Rând.5000 col.1 trebuie să fie mai mare sau egala  cu suma valorilor: CAP1 Rând.5100 col.1, CAP2 Rând.7100 col.1, CAP2 Rând.7200 col.1, CAP2 Rând.7300 col.1, CAP2 Rând.7400 col.1 și CAP2 Rând.7500 col.1. Valoarea găsită: ' + CAP1_R5000_F + ', suma calculată: ' + calculatedSum_F, {
                     '@CAP_CUATM_FILIAL': CAP_CUATM_FILIAL
                 })
             });
