@@ -1,0 +1,6 @@
+Dupa exemplu din fisierul js 
+creaza o validare 
+
+rând. 1800 col. 3 =  rând. 1620 col.3 (cap.I)+ rând. 6100 col.2(cap.Ia)
+
+si pentru filiala 
