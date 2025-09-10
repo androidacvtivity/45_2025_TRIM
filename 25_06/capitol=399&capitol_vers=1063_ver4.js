@@ -549,12 +549,7 @@ function CAP1() {
 
 
 
-    //-------------------------------Rind 1800-----------------------------------------------------
-    R1800_C5.val(formatVal(
-         Number(R1620_C5.val()), 0));
-    //-------------------------------Rind 1230-----------------------------------------------------
-
-
+ 
 
     R1230_C1.val(formatVal(
         Number(R1231_C1.val()) + Number(R1232_C1.val()) + Number(R1233_C1.val()) +
@@ -666,7 +661,16 @@ function CAP1() {
         Number(R1629_C5.val()) + Number(R1630_C5.val()) + Number(R1631_C5.val()) + Number(R1632_C5.val()) +
         Number(R1633_C5.val()) + Number(R1634_C5.val()) + Number(R1635_C5.val()) + Number(R1636_C5.val()), 0));
 
+
+
     //-------------------------------Rind 1680-----------------------------------------------------
+
+    //-------------------------------Rind 1800-----------------------------------------------------
+    R1800_C5.val(formatVal(
+        Number(R1620_C5.val()), 0)); // In this cell - fields - not actualize imediat fields 
+    //-------------------------------Rind 1230-----------------------------------------------------
+
+
 
     R1680_C1.val(formatVal(Number(R1681_C1.val()) + Number(R1682_C1.val()), 1));
     R1680_C2.val(formatVal(Number(R1681_C2.val()) + Number(R1682_C2.val()), 1));
@@ -687,4 +691,6 @@ function CAP1() {
     //-------------------------------Rind 2000 (final total)--------------------------------------
     R2000_C1.val(formatVal(
         Number(R1300_C1.val()) + Number(R1400_C1.val()) + Number(R1700_C1.val()) + Number(R1900_C1.val()), 0));
+
+
 }
